@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, SafeAreaView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 
@@ -24,6 +25,8 @@ const metodos = [
 export default function PagamentoScreen() {
   const [selecionado, setSelecionado] = useState<string | null>(null);
 
+  const navigation = useNavigation();
+
   const handleConfirmar = () => {
     if (selecionado) {
       const metodoSelecionado = metodos.find(m => m.id === selecionado);
@@ -39,6 +42,9 @@ export default function PagamentoScreen() {
 
   return (
     <SafeAreaView style={styles.safe}>
+      <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+  <Text style={styles.backButtonText}>◀ Voltar</Text>
+</TouchableOpacity>
       <View style={styles.container}>
         <Text style={styles.titulo}>Escolha o método de pagamento:</Text>
         {metodos.map(metodo => (
@@ -144,5 +150,23 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     letterSpacing: 1,
+  },
+  backButton: {
+    position: 'absolute',
+    top: 40,
+    left: 20,
+    zIndex: 10,
+    padding: 8,
+    backgroundColor: '#f4f4f4',
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOpacity: 0.08,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 },
+  },
+  backButtonText: {
+    color: '#21a1f1',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });

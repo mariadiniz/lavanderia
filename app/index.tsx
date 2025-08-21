@@ -3,6 +3,7 @@ import { View, Text, TextInput, Image, TouchableOpacity, KeyboardAvoidingView, P
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import BubbleBackground from '../components/BubbleBackground';
+import DonaMaria from '../assets/images/dona-maria.png'
 // Atualize o caminho abaixo se o arquivo de estilos estiver em outro local ou nome
 import styles from '../styles/home';
 type RootStackParamList = {
@@ -22,10 +23,11 @@ export default function HomeScreen() {
         style={styles.inner}
       >
         <Image
-          source={{ uri: 'https://s2.glbimg.com/oM0X1uWP9dYNVRVLwAEok_kUams=/696x390/top/smart/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2016/G/l/YEnyOKS7yYQlNDiFFU0w/logo-mais-voce-454x255-2-.jpg' }}
+          source={DonaMaria}
           style={styles.logo}
           resizeMode="contain"
         />
+        <Text style={styles.title}>Dona Maria</Text>
         <View style={styles.card}>
           <Text style={styles.title}>Bem-vindo à Lavanderia!</Text>
           <Text style={styles.subtitle}>Por favor, faça login para acessar nossos serviços.</Text>
