@@ -3,12 +3,14 @@ import { StyleSheet, Dimensions } from 'react-native';
 const { width } = Dimensions.get('window');
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#e3f0ff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+container: {
+  flex: 1,
+  backgroundColor: '#fff',
+  paddingHorizontal: 20,
+  justifyContent: 'flex-start',
+  maxWidth: 420, // Limita largura no web
+  alignSelf: 'center', // Centraliza no web
+},
   inner: {
     flex: 1,
     width: '100%',
