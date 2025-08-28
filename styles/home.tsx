@@ -41,16 +41,19 @@ container: {
     fontWeight: 'bold',
     marginBottom: 8,
     textAlign: 'center',
+    fontFamily: 'Quicksand',
   },
   subtitle: {
     fontSize: 16,
     color: '#333',
     textAlign: 'center',
+    fontFamily: 'Quicksand',
   },
   form: {
     marginTop: 10,
     width: width * 0.85,
     alignItems: 'center',
+
   },
   input: {
     width: '100%',
@@ -61,6 +64,7 @@ container: {
     borderRadius: 5,
     backgroundColor: '#fff',
     fontSize: 16,
+    fontFamily: 'Quicksand',
   },
   button: {
     marginTop: 10,
@@ -70,10 +74,12 @@ container: {
     borderRadius: 5,
     alignItems: 'center',
     width: '100%',
+
   },
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 17,
+    fontFamily: 'Quicksand',
   },
 });
